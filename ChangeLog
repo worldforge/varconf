@@ -1,4 +1,8 @@
 ChangeLog for varconf
+Sunday, 11th August, 2002, Ron Steinke <rsteinke@w-link.net>
+	* Work around for win32's buggy atof(), got rid of a
+	  signed vs. unsigned comparison warning.
+
 Friday, 13th June, 2003, Al Riddoch <alriddoch@zepler.org>
 	* Remove support for sigc++ 1.2 from this legacy version. This version
 	  is now the recommended version for use with application which

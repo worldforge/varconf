@@ -31,6 +31,15 @@
 #ifdef __WIN32__
 #include <tchar.h>
 #define snprintf _snprintf
+// apparently, win32 atof() is somewhat broken
+static double
+win32_atof_substitute(const char* in)
+{
+  double out;
+  sscanf(in, "%lf", &out);
+  return out;
+}
+#define atof win32_atof_substitute
 #endif  
 
 namespace varconf {
@@ -315,6 +324,8 @@ Variable& Variable::operator=( const VarList& v)
 
 Variable& Variable::operator[](const int i)
 {
+  assert(i >= 0); // this function should really take unsigned instead
+
   std::vector<Variable> *the_array = array();
 
   if(!the_array) {
@@ -323,7 +334,7 @@ Variable& Variable::operator[](const int i)
     VarPtr::operator=(new_array);
     the_array = new_array;
   }
-  else if (the_array->size() < i + 1)
+  else if (the_array->size() < (unsigned) i + 1)
     the_array->resize(i + 1);
 
   return (*the_array)[i];
