@@ -1,4 +1,10 @@
 ChangeLog for varconf
+Friday, 13th June, 2003, Al Riddoch <alriddoch@zepler.org>
+	* Remove support for sigc++ 1.2 from this legacy version. This version
+	  is now the recommended version for use with application which
+	  require sigc++ 1.0. Application which require sigc++ 1.2 should
+	  use the 0.6 series or later.
+
 Friday, 17th April, 2003, Al Riddoch <alriddoch@zepler.org>
 	* Fix up headers for clean handling, and portability.
 

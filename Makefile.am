@@ -2,12 +2,10 @@
 
 SUBDIRS = varconf doc tests
 
-EXTRA_SCRIPTS = varconf-config
-
-bin_SCRIPTS = @VARCONF_SCRIPT@
+bin_SCRIPTS = varconf-config
 
 m4datadir = $(datadir)/aclocal
-m4data_DATA = @VARCONF_MACRO@
+m4data_DATA = varconf.m4
 
 manpagedir = $(mandir)/man1
 manpage_DATA = varconf-config.1
