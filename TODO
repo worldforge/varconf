@@ -1,3 +1,5 @@
+Remove virtual function implementations from the headers.
+
 TODO for varconf
   * Revise getEnv() and getCmdline() to report errors more often.
   * Review code and add the "const" modifier where appropriate.
