@@ -8,7 +8,7 @@ compiler:
   - clang
 
 install:
-  - sudo apt-get -y install libsigc++-1.2-dev libsigc++-2.0-dev
+  - sudo apt-get -y install libsigc++-2.0-dev
 
 
 script:
