@@ -1,5 +1,6 @@
 #! /bin/sh
 
+cp README.md README
 rm -f config.cache
 
 #Check if the autoreconf command is available, and use that if so.
